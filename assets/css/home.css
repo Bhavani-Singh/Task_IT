@@ -1,0 +1,173 @@
+/* css normalization */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* setting the background color and the font style */
+body {
+    background: linear-gradient(238deg, rgba(162, 32, 236, 0.768032212885154) 0%, rgba(1, 232, 246, 1) 64%);
+    font-family: cursive;
+}
+
+
+/* using flex box for arranging the form and task list */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* styling the main container*/
+#main {
+    width: 500px;
+    height: auto;
+    margin: 3px;
+    border-radius: 3%;
+    box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+/* desiging the task list where the task is displayed */
+#task {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+    width: 500px;
+    border-radius: 3%;
+    box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+/* designing the form elements */
+input[type=checkbox] {
+    vertical-align: middle;
+}
+
+label,
+input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked+label {
+    text-decoration: line-through;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+textarea {
+    border: none;
+    outline: none;
+    height: 30px;
+    font-family: cursive;
+}
+
+select,
+input[type="date"],
+input[type="checkbox"],
+textarea:hover{
+    cursor: pointer;
+}
+
+/* styling the category which is displayed on the task list */
+#display-category {
+    margin: 5px;
+    width: 70px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* styling the heading */
+h1 {
+    background-image: linear-gradient(to left, #5734b8, #a866eb);
+    color: transparent;
+    text-align: center;
+    border-bottom: 5px solid rgb(61, 51, 51, 0.5);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* positioning the form elements */
+#group1 {
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#group2, #group3 {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+button {
+    width: 90px;
+    height: 35px;
+    font-family: cursive;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
+  }
+
+
+/* general classes */
+.personal {
+    background-color: #FECACA;
+}
+
+.school {
+    background-color: #c3fede;
+}
+
+.office {
+    background-color: #FDE68A;
+}
+
+.cleaning {
+    background-color: #f3a7da;
+}
+
+.other {
+    background-color: #FDBA74;
+}
+
+.height50px {
+    height: 50px;
+}
+
+.bg-red {
+    background-color: rgb(253, 107, 107);
+}
+
+.bg-aquamarine {
+    background-color: rgb(64, 247, 186);
+}
+
+.text-style {
+    color: #5b0c6e;
+    font-size: 18px;
+}

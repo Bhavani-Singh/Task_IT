@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="main">
+            <!-- title  -->
+            <div id="heading">
+                <h1>
+                    <%= title %>
+                </h1>
+            </div>
+            <!-- main form section-->
+            <div id="main-form">
+                <form action="" method="">
+
+                    <!-- Group 1: Category and Due Date -->
+                    <div id="group1" class="height50px text-style">
+                        <label for="category" class="mint"><b>CATEGORY</b>
+                            <select name="category" id="category">
+                                <option value="" disabled selected hidden>Choose a category</option>
+                                <option value="personal">personal</option>
+                                <option value="school">school</option>
+                                <option value="office">work</option>
+                                <option value="cleaing">cleaing</option>
+                                <option value="other">other</option>
+                            </select>
+                        </label>
+
+                        <label for="due-date" class="mint"><b>DUE DATE</b>
+                            <input type="date" id="due-date" name="due-date">
+                        </label>
+                    </div>
+
+                    <!-- Group 2: Description -->
+                    <div id="group2" class="height50px text-style">
+                        <label for="description" class="mint"><b>DESCRIPTION</b></label>
+                        <input type="text" name="description" id="description" placeholder="what do you need to do?">
+                    </div>
+
+                    <!-- Group 3: Add and Delete Buttons -->
+                    <div id="group3" class="height50px text-style">
+                        <button type="submit" class="bg-aquamarine">Add</button>
+                        <button class="bg-red">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+         <!-- Displaying Tasks -->
+        <% for(let i of todo_list){%>
+            <div id="task">
+
+                <div id="#display-description">
+                    <input type="checkbox" name="done" id="<%=i.id%>" <% if (i.done) { %> checked <% } %> >
+                        <label for="<%=i.id%>" <% if (i.done) { %>class="strikethrough"<% } %> >
+                                <p>
+                                    <%= i.description%>
+                                </p>
+                                <p>
+                                    <%= i.dueDate%>
+                                </p>
+
+                        </label>
+                </div>
+
+                <!-- Displaying Category with Background Color -->
+                <div id="display-category" class="<%= i.category.toLowerCase() %>">
+                    <%= i.category%>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</body>
+</html>
