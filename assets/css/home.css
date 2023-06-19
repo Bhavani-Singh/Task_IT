@@ -24,7 +24,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    padding-top: 20px;
+    /* height: 100vh; */
 }
 
 /* styling the main container*/
@@ -73,12 +74,13 @@ textarea {
     outline: none;
     height: 30px;
     font-family: cursive;
+    border-radius: 5px;
 }
 
 select,
 input[type="date"],
 input[type="checkbox"],
-textarea:hover{
+textarea:hover {
     cursor: pointer;
 }
 
@@ -109,7 +111,8 @@ h1 {
     justify-content: space-around;
 }
 
-#group2, #group3 {
+#group2,
+#group3 {
     padding: 10px;
     margin: 5px;
     text-align: center;
@@ -131,7 +134,28 @@ button:hover {
 button:active {
     box-shadow: 0 2px #666;
     transform: translateY(3px);
-  }
+}
+
+/*styling delete button*/
+#deleteBtn {
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+}
+
+/* to diplay the category and delete button inone line*/
+.display-inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* removing the default style for anchor tag*/
+a {
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Inherit the color from the parent element */
+}
 
 
 /* general classes */
